@@ -199,7 +199,7 @@ export default {
   data () {
     return {
       currentPage4: 4,
-      oldPassword: '123456',
+      oldPassword: '123456a',
       newPassword: '123456q',
       centerDialogVisible: false,
       input: '',
@@ -252,9 +252,7 @@ export default {
       multipleSelection: []
     }
   },
-  created () {
-    this.token = util.cookies.get('token')
-  },
+
   methods: {
     // 多选框
     // toggleSelection(rows) {
@@ -299,15 +297,15 @@ export default {
       this.centerDialogVisible = false
       // 获取toke值
       this.token = util.cookies.get('token')
-      let params = {}
       console.log(this.token)
       userpassword({
         oldPassword: this.oldPassword,
         newPassword: this.newPassword,
-        userToken: this.token
+        token: this.token
       }).then(res => {
         console.log(res)
       }).cath(err => {
+
       })
     },
     remove () {

@@ -6,13 +6,13 @@
       </el-header>
       <div class="kz">
         <img style="width:60%" src="../../../images/img/xingzhuang.png" alt />
-        <span style="display:inline-block" >
+        <span style="display:inline-block" @click="quyu">
           区域
           <div class="img">
             <img src="../../imgs/rzimg/denglu.png" alt />
           </div>
         </span>
-        <span style="display:inline-block" @click="bm">
+        <span style="display:inline-block">
           部门
           <div class="img">
             <img src="../../imgs/rzimg/caozuo.png" alt />
@@ -64,20 +64,20 @@ export default {
   name: "sblist",
   data() {
     return {
-    //   input: "",
+      //   input: "",
       currentPage4: 4,
       tableData: [
         {
-          sb_name: "区域名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
+          sb_name: "部门名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
         },
         {
-          sb_name: "区域名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
+          sb_name: "部门名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
         },
         {
-          sb_name: "区域名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
+          sb_name: "部门名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
         },
         {
-          sb_name: "区域名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
+          sb_name: "部门名称xxxxxxxxxxxxxxxxxxxxxxxxxx"
         }
       ]
     };
@@ -116,15 +116,14 @@ export default {
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
     },
-    // 点击部门功能
-    bm(){
-        this.$router.push('/bm')
+    // 点击区域功能
+    quyu () {
+      this.$router.push('/tjgroup');
     },
-    // 点击小组功能
+     // 点击小组功能
     xgroup(){
          this.$router.push('/xgroup')
     }
-
   }
 };
 </script>

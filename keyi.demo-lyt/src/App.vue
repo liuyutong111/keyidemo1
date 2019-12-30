@@ -25,8 +25,4 @@ export default {
 
 <style lang="scss">
 @import '~@/assets/style/public-class.scss';
-#app
-  .d2-layout-header-aside-group{
-    background-image: url('./views/images/img/bjs.jpg') !important;
-  }
 </style>
